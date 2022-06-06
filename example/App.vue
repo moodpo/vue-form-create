@@ -64,29 +64,6 @@ const dataJson = {
       key: 'ad1cb09c208f427594b3bff17ab67284',
       model: 'textarea_ad1cb09c208f427594b3bff17ab67284',
       rules: []
-    },
-    {
-      label: '计数器',
-      type: 'number',
-      options: {
-        width: '100%',
-        defaultValue: 0,
-        min: 0,
-        max: 100,
-        step: 1,
-        disabled: false,
-        rules: {
-          trigger: 'blur',
-          enum: '',
-          message: '',
-          pattern: '',
-          required: false,
-          type: 'any'
-        }
-      },
-      key: '66930ce681e8453a9f0d1401fccb0895',
-      model: 'number_66930ce681e8453a9f0d1401fccb0895',
-      rules: []
     }
   ],
   config: {
@@ -106,9 +83,17 @@ const valueJson = {}
 
 <template>
   <!-- <ElDesignForm /> -->
-  <ElGenerateForm
-    :data="dataJson"
-    :value="valueJson"
-    @handleSelectParam="handleSelectParam"
-  />
+  <div class="form-wrapper">
+    <ElGenerateForm
+      :data="dataJson"
+      :value="valueJson"
+      @handleSelectParam="handleSelectParam"
+    />
+  </div>
 </template>
+<style scoped>
+  .form-wrapper {
+    margin: 20px auto;
+    width: 500px;
+  }
+</style>
