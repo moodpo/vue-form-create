@@ -13,7 +13,10 @@
         <template #prefix v-if="element.options.prefix">{{ element.options.prefix }}</template>
         <template #suffix v-if="element.options.suffix">{{ element.options.suffix }}</template>
         <template #prepend v-if="element.options.prepend">{{ element.options.prepend }}</template>
-        <template #append v-if="element.options.append">{{ element.options.append }}</template>
+        <!-- <template #append v-if="element.options.append">{{ element.options.append }}</template> -->
+        <template #append>
+          <el-button @click="() => handleSelectParamInFormItem(element)">选择上下文参数</el-button>
+        </template>
       </el-input>
     </template>
 
@@ -31,7 +34,10 @@
         <template #prefix v-if="element.options.prefix">{{ element.options.prefix }}</template>
         <template #suffix v-if="element.options.suffix">{{ element.options.suffix }}</template>
         <template #prepend v-if="element.options.prepend">{{ element.options.prepend }}</template>
-        <template #append v-if="element.options.append">{{ element.options.append }}</template>
+        <!-- <template #append v-if="element.options.append">{{ element.options.append }}</template> -->
+        <template #append>
+          <el-button @click="() => handleSelectParamInFormItem(element)">选择上下文参数</el-button>
+        </template>
       </el-input>
     </template>
 
@@ -238,6 +244,7 @@ export default defineComponent({
     SvgIcon,
     RichTextEditor
   },
+  emit: ['handleSelectParamInForm'],
   props: {
     config: {
       type: Object as PropType<WidgetForm['config']>,
@@ -256,7 +263,7 @@ export default defineComponent({
       required: true
     }
   },
-  setup(props) {
+  setup(props, { emit }) {
     const data = computed({
       get: () => props.model[props.element.model],
       set: val => {
@@ -272,10 +279,15 @@ export default defineComponent({
       data.value = fileList
     }
 
+    const handleSelectParamInFormItem = (element: any) => {
+      emit('handleSelectParamInForm', element)
+    }
+
     return {
       data,
       handleFilterOption,
-      handleUploadSuccess
+      handleUploadSuccess,
+      handleSelectParamInFormItem
     }
   }
 })

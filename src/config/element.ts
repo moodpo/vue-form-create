@@ -54,7 +54,7 @@ export const basicComponents = [
       prefix: '',
       suffix: '',
       prepend: '',
-      append: '',
+      append: '<el-button>选择上下文节点</el-button>',
       disabled: false,
       clearable: false,
       readonly: false,

@@ -32,6 +32,7 @@
                 :element="colItem"
                 :config="data.config"
                 :disabled="disabled"
+                @handleSelectParamInForm="handleSelectParamInForm"
               />
             </el-col>
           </el-row>
@@ -43,6 +44,7 @@
           :element="widgetForm.list[index]"
           :config="data.config"
           :disabled="disabled"
+          @handleSelectParamInForm="handleSelectParamInForm"
         />
       </template>
     </el-form>
@@ -60,6 +62,7 @@ export default defineComponent({
   components: {
     ElGenerateFormItem
   },
+  emit: ['handleSelectParam'],
   props: {
     data: {
       type: Object,
@@ -73,7 +76,7 @@ export default defineComponent({
       default: false
     }
   },
-  setup(props) {
+  setup(props, { emit }) {
     const state = reactive({
       generateForm: null as any,
       model: {} as any,
@@ -160,6 +163,10 @@ export default defineComponent({
       })
     }
 
+    const handleSelectParamInForm = (val:any) => {
+      emit('handleSelectParam', val)
+    }
+
     const reset = () => {
       state.generateForm.resetFields()
     }
@@ -167,7 +174,8 @@ export default defineComponent({
     return {
       ...toRefs(state),
       getData,
-      reset
+      reset,
+      handleSelectParamInForm
     }
   }
 })
