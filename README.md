@@ -4,7 +4,7 @@
 
 在输入框后面添加了上下文参数按钮，用于选择上下文参数和其他与输入框相关的事件。
 
-![表单截图](./form.png)
+![表单截图](https://www.yangxiaoxie.com/assets/2021-05-22/form.png)
 
 ```vue
 <template>
