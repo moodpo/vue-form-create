@@ -1,12 +1,12 @@
 {
-  "name": "vue-form-create",
-  "description": "一个基于Vue3.0 + TS 的表单设计器",
-  "version": "1.2.10",
+  "name": "vue-form-create-auto-ops",
+  "description": "一个基于Vue3.0 + TS 的表单设计器（自动化运维）",
+  "version": "1.0.0",
   "main": "dist/formCreate.umd.min.js",
   "types": "src/index.d.ts",
-  "homepage": "https://github.com/fuchengwei/vue-form-create",
+  "homepage": "https://github.com/moodpo/vue-form-create",
   "author": {
-    "name": "fuchengwei"
+    "name": "moodpo"
   },
   "keywords": [
     "Form",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com:fuchengwei/vue-form-create"
+    "url": "git+https://github.com/moodpo/vue-form-create"
   },
   "files": [
     "dist/*",
