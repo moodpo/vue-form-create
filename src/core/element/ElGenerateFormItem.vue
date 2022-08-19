@@ -14,8 +14,8 @@
         <template #suffix v-if="element.options.suffix">{{ element.options.suffix }}</template>
         <template #prepend v-if="element.options.prepend">{{ element.options.prepend }}</template>
         <!-- <template #append v-if="element.options.append">{{ element.options.append }}</template> -->
-        <template #append>
-          <el-button @click="() => handleSelectParamInFormItem(element)">选择上下文参数</el-button>
+        <template #append v-if="element.options.showParamBtn">
+          <el-button @click="() => handleSelectParamInFormItem(element)">选择参数</el-button>
         </template>
       </el-input>
     </template>
@@ -35,8 +35,8 @@
         <template #suffix v-if="element.options.suffix">{{ element.options.suffix }}</template>
         <template #prepend v-if="element.options.prepend">{{ element.options.prepend }}</template>
         <!-- <template #append v-if="element.options.append">{{ element.options.append }}</template> -->
-        <template #append>
-          <el-button @click="() => handleSelectParamInFormItem(element)">选择上下文参数</el-button>
+        <template #append v-if="element.options.showParamBtn">
+          <el-button @click="() => handleSelectParamInFormItem(element)">选择参数</el-button>
         </template>
       </el-input>
     </template>

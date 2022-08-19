@@ -121,6 +121,10 @@
       />
     </el-form-item>
 
+    <el-form-item label="是否显示参数选择按钮" v-if="hasKey('showParamBtn')">
+      <el-switch v-model="data.options.showParamBtn" />
+    </el-form-item>
+
     <el-form-item label="是否显示切换按钮" v-if="hasKey('showPassword')">
       <el-switch v-model="data.options.showPassword" />
     </el-form-item>
