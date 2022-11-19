@@ -47,6 +47,7 @@ export const basicComponents = [
     label: '单行文本',
     type: 'input',
     category: 'login',
+    parent: '',
     options: {
       width: '100%',
       defaultValue: '',
@@ -67,6 +68,7 @@ export const basicComponents = [
     label: '密码框',
     type: 'password',
     category: 'login',
+    parent: '',
     options: {
       width: '100%',
       defaultValue: '',
@@ -88,6 +90,7 @@ export const basicComponents = [
     label: '多行文本',
     type: 'textarea',
     category: 'login',
+    parent: '',
     options: {
       width: '100%',
       defaultValue: '',
@@ -120,6 +123,7 @@ export const basicComponents = [
     label: '单选框组',
     type: 'radio',
     category: 'login',
+    parent: '',
     options: {
       defaultValue: '',
       width: '',
@@ -155,6 +159,7 @@ export const basicComponents = [
     label: '多选框组',
     type: 'checkbox',
     category: 'login',
+    parent: '',
     options: {
       defaultValue: [],
       width: '',
@@ -190,6 +195,7 @@ export const basicComponents = [
     label: '时间选择器',
     type: 'time',
     category: 'login',
+    parent: '',
     options: {
       defaultValue: '',
       width: '',
@@ -207,6 +213,7 @@ export const basicComponents = [
     label: '日期选择器',
     type: 'date',
     category: 'login',
+    parent: '',
     options: {
       defaultValue: '',
       width: '',
@@ -223,6 +230,7 @@ export const basicComponents = [
     label: '评分',
     type: 'rate',
     category: 'login',
+    parent: '',
     options: {
       defaultValue: 0,
       max: 5,
@@ -235,6 +243,7 @@ export const basicComponents = [
     label: '下拉选择框',
     type: 'select',
     category: 'login',
+    parent: '',
     options: {
       defaultValue: '',
       width: '200px',
@@ -273,6 +282,7 @@ export const basicComponents = [
     label: '开关',
     type: 'switch',
     category: 'login',
+    parent: '',
     options: {
       defaultValue: false,
       disabled: false,
@@ -285,6 +295,7 @@ export const basicComponents = [
     label: '滑块',
     type: 'slider',
     category: 'login',
+    parent: '',
     options: {
       defaultValue: 0,
       width: '',
@@ -300,6 +311,7 @@ export const basicComponents = [
     label: '文字',
     type: 'text',
     category: 'login',
+    parent: '',
     options: {
       defaultValue: 'This is a text'
     }

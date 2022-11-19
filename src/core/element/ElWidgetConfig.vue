@@ -15,6 +15,10 @@
       </el-radio-group>
     </el-form-item>
 
+    <el-form-item label="父级组件标识">
+      <el-input v-model="data.parent" />
+    </el-form-item>
+
     <el-form-item label="宽度" v-if="hasKey('width')">
       <el-input v-model="data.options.width" />
     </el-form-item>
