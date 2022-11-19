@@ -12,6 +12,7 @@
       <el-radio-group v-model="data.category">
         <el-radio border label="login">登录参数</el-radio>
         <el-radio border label="parameter">业务参数</el-radio>
+        <el-radio border label="result">结果参数</el-radio>
       </el-radio-group>
     </el-form-item>
 
