@@ -27,7 +27,10 @@
           <template #prepend v-if="element.options.prepend">
             {{ element.options.prepend }}
           </template>
-          <template #append v-if="element.options.append">
+          <template #append v-if="element.options.showParamBtn">
+            <el-button @click="() => {}">选择参数</el-button>
+          </template>
+          <template #append v-else-if="element.options.append">
             {{ element.options.append }}
           </template>
         </el-input>
@@ -53,7 +56,10 @@
           <template #prepend v-if="element.options.prepend">
             {{ element.options.prepend }}
           </template>
-          <template #append v-if="element.options.append">
+          <template #append v-if="element.options.showParamBtn">
+            <el-button @click="() => {}">选择参数</el-button>
+          </template>
+          <template #append v-else-if="element.options.append">
             {{ element.options.append }}
           </template>
         </el-input>
@@ -242,6 +248,7 @@
           :style="{ width: element.options.width }"
         />
       </template>
+
     </el-form-item>
     <div class="widget-view-action" v-if="selectWidget?.key === element.key">
       <SvgIcon iconClass="copy" @click.stop="$emit('copy')" />

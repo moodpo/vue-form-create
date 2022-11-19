@@ -46,6 +46,7 @@ export const basicComponents = [
   {
     label: '单行文本',
     type: 'input',
+    category: 'login',
     options: {
       width: '100%',
       defaultValue: '',
@@ -65,6 +66,7 @@ export const basicComponents = [
   {
     label: '密码框',
     type: 'password',
+    category: 'login',
     options: {
       width: '100%',
       defaultValue: '',
@@ -85,6 +87,7 @@ export const basicComponents = [
   {
     label: '多行文本',
     type: 'textarea',
+    category: 'login',
     options: {
       width: '100%',
       defaultValue: '',
@@ -102,6 +105,7 @@ export const basicComponents = [
   {
     label: '计数器',
     type: 'number',
+    category: 'login',
     options: {
       width: '',
       defaultValue: 0,
@@ -115,6 +119,7 @@ export const basicComponents = [
   {
     label: '单选框组',
     type: 'radio',
+    category: 'login',
     options: {
       defaultValue: '',
       width: '',
@@ -149,6 +154,7 @@ export const basicComponents = [
   {
     label: '多选框组',
     type: 'checkbox',
+    category: 'login',
     options: {
       defaultValue: [],
       width: '',
@@ -183,6 +189,7 @@ export const basicComponents = [
   {
     label: '时间选择器',
     type: 'time',
+    category: 'login',
     options: {
       defaultValue: '',
       width: '',
@@ -199,6 +206,7 @@ export const basicComponents = [
   {
     label: '日期选择器',
     type: 'date',
+    category: 'login',
     options: {
       defaultValue: '',
       width: '',
@@ -214,6 +222,7 @@ export const basicComponents = [
   {
     label: '评分',
     type: 'rate',
+    category: 'login',
     options: {
       defaultValue: 0,
       max: 5,
@@ -225,6 +234,7 @@ export const basicComponents = [
   {
     label: '下拉选择框',
     type: 'select',
+    category: 'login',
     options: {
       defaultValue: '',
       width: '200px',
@@ -262,6 +272,7 @@ export const basicComponents = [
   {
     label: '开关',
     type: 'switch',
+    category: 'login',
     options: {
       defaultValue: false,
       disabled: false,
@@ -273,6 +284,7 @@ export const basicComponents = [
   {
     label: '滑块',
     type: 'slider',
+    category: 'login',
     options: {
       defaultValue: 0,
       width: '',
@@ -287,6 +299,7 @@ export const basicComponents = [
   {
     label: '文字',
     type: 'text',
+    category: 'login',
     options: {
       defaultValue: 'This is a text'
     }
@@ -297,6 +310,7 @@ export const advanceComponents = [
   {
     label: '图片',
     type: 'img-upload',
+    category: 'login',
     options: {
       defaultValue: [],
       name: 'file',
@@ -313,6 +327,7 @@ export const advanceComponents = [
   {
     label: '富文本编辑器',
     type: 'richtext-editor',
+    category: 'login',
     options: {
       defaultValue: '',
       width: '',
@@ -322,6 +337,7 @@ export const advanceComponents = [
   {
     label: '级联选择器',
     type: 'cascader',
+    category: 'login',
     options: {
       defaultValue: [],
       width: '200px',
@@ -347,6 +363,7 @@ export const layoutComponents = [
   {
     label: '栅格布局',
     type: 'grid',
+    category: 'login',
     columns: [
       {
         span: 12,

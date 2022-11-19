@@ -1,11 +1,18 @@
 <template>
   <el-form label-position="top" v-if="data" :key="data.key">
-    <el-form-item label="字段标识" v-if="data.type !== 'grid'">
+    <el-form-item label="字段标识">
       <el-input v-model="data.model" />
     </el-form-item>
 
-    <el-form-item label="标题" v-if="data.type !== 'grid'">
+    <el-form-item label="标题">
       <el-input v-model="data.label" />
+    </el-form-item>
+
+    <el-form-item label="字段分类">
+      <el-radio-group v-model="data.category">
+        <el-radio border label="login">登录参数</el-radio>
+        <el-radio border label="parameter">业务参数</el-radio>
+      </el-radio-group>
     </el-form-item>
 
     <el-form-item label="宽度" v-if="hasKey('width')">
@@ -94,6 +101,10 @@
       <el-input v-model="data.options.suffix" />
     </el-form-item>
 
+    <el-form-item label="是否显示参数选择按钮" v-if="hasKey('showParamBtn')">
+      <el-switch v-model="data.options.showParamBtn" />
+    </el-form-item>
+
     <el-form-item label="前置标签" v-if="hasKey('prepend')">
       <el-input v-model="data.options.prepend" />
     </el-form-item>
@@ -119,10 +130,6 @@
         v-model="data.options.range"
         @change="handleSliderModeChange"
       />
-    </el-form-item>
-
-    <el-form-item label="是否显示参数选择按钮" v-if="hasKey('showParamBtn')">
-      <el-switch v-model="data.options.showParamBtn" />
     </el-form-item>
 
     <el-form-item label="是否显示切换按钮" v-if="hasKey('showPassword')">
